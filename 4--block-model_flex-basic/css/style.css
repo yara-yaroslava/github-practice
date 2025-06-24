@@ -1,82 +1,59 @@
 * {
+  box-sizing: border-box;
+  /* ВАЖЛИВО! Задля фіксованого розміру встановлених width & height елементів. За замовчуванням box-sizing: content-box; тоді розмір елементу буде змінюватись в залежності від розміру контенту. То є не ок.*/
   font-family: sans-serif;
 }
 
-.bg-wrapper {
-  height: 100vh;
-  background-image: url(../img/document-bg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+/* .block {
+  width: 200px;
+  height: 160px; Не вказуємо висоту, щоб уникати переповнення контенту.
+  швидке написання: w200+h160
+} */
 
 .container {
-  width: 1280px;
+  width: 1165px;
   margin: 0 auto;
 }
 
+.navigation--wrapper {
+  box-shadow: 8px 4px 15px rgba(95, 95, 95, 0.156);
+}
+/* Якщо потрібно закріпити навігаційну панель при скролінгу сторінки, то треба задати background-color. Якщо не потрібно - то залишаємо так. */
+
 .navigation {
-  padding: 25px 0px;
-  background-color: rgb(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px 0;
 }
 
-.navigation-logo {
-  display: inline-block;
-  font-weight: 400;
-  font-size: 26px;
-  line-height: 31px;
-  color: #fff;
+.navigation__logo {
+  width: 53px;
+  height: 58px;
+}
+/* Для більшого контролю розміру картинки .svg в різних станах батьківського елементу, ми в index.html змінюємо w100%+h100%. А в style.css зазначаємо їх першочергові розміри. */
+
+.navigation__menu {
+  max-width: 60%;
+  width: 100%;
+
+  display: flex;
+  gap: 40px; /* Ця властивість використовується тільки сучасними браузерами (аналітика Can I Use), тому треба відштовхуватись від клієнто-орінтованості замовника і робити висновки.*/
 }
 
-.navigation-menu {
-  display: inline-block;
+.navigation__item {
+  /* margin-right: 40px; Може бути замість gap: 40px;.*/
 }
 
-.navigation-menu-item {
-  display: inline-block;
-}
-
-.navigation-menu-link {
-  font-size: 20px;
-  line-height: 24px;
-  color: #fff;
+.navigation__link {
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
   text-decoration: none;
 }
 
-.content {
-  margin-top: 241px;
+.navigation__profile {
+  width: 34px;
+  height: 34px;
 }
 
-.content-heading {
-  font-family: serif;
-  font-weight: 400;
-  font-size: 72px;
-  line-height: 104px;
-  color: #6a6a6a;
-}
-
-.content-text {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 30px;
-  color: #6a6a6a;
-  width: 511px;
-  /* Визначати розміщення width в .content або тільки в .content-text виходячи з відповіді замовника: чи планується заголовок збільшуватись в ширині? чи блок тексту має бути статичним в ширині? */
-  margin: 32px 0;
-}
-
-.content-btn {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 24px;
-  background-color: blue;
-  text-decoration: none;
-  padding: 10px 25px;
-  color: #fff;
-  border-radius: 8px;
-}
-
-.content-btn:hover {
-  padding: 11px 29px;
-  color:rgb(255, 255, 255);
-  background-color: rgb(103, 103, 255);
-}
