@@ -1,0 +1,204 @@
+* {
+  box-sizing: border-box;
+  /* ВАЖЛИВО! Задля фіксованого розміру встановлених width & height елементів. За замовчуванням box-sizing: content-box; тоді розмір елементу буде змінюватись в залежності від розміру контенту. То є не ок.*/
+  font-family: sans-serif;
+}
+
+/* .block {
+  width: 200px;
+  height: 160px; Не вказуємо висоту, щоб уникати переповнення контенту.
+  швидке написання: w200+h160
+} */
+
+.container {
+  width: 1165px;
+  margin: 0 auto;
+}
+
+/* NAVIGATION start *****************/
+
+.navigation--wrapper {
+  box-shadow: 8px 4px 15px rgba(95, 95, 95, 0.156);
+}
+/* Якщо потрібно закріпити навігаційну панель при скролінгу сторінки, то треба задати background-color. Якщо не потрібно - то залишаємо так. */
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px 0;
+}
+
+.navigation__logo {
+  width: 53px;
+  height: 58px;
+}
+/* Для більшого контролю розміру картинки .svg в різних станах батьківського елементу, ми в index.html змінюємо w100%+h100%. А в style.css зазначаємо їх першочергові розміри. */
+
+.navigation__menu {
+  display: flex;
+  gap: 40px; /* Ця властивість використовується тільки сучасними браузерами (аналітика Can I Use), тому треба відштовхуватись від клієнто-орінтованості замовника і робити висновки.*/
+}
+
+.navigation__item {
+  /* margin-right: 40px; Може бути замість gap: 40px;.*/
+}
+
+.navigation__link {
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.navigation__profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  /* Якщо браузер не підтримує, то застосовуємо margin.  */
+}
+
+.navigation__profile-icon {
+  width: 34px;
+  height: 34px;
+}
+
+.navigation__profile-text {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+/**************** NAVIGATION end *****************/
+/**************** HERO start ****************/
+
+.hero-bg {
+  background-image: linear-gradient(
+    to top,
+    #566a82 0%,
+    #566a82 50%,
+    transparent calc(50% + 1px)
+  );
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 50px 60px;
+  margin-top: 30px;
+
+  background-color: #fff;
+  border-radius: 30px;
+  box-shadow: 2px 2px 5px rgba(20, 29, 61, 0.15),
+    -2px -2px 5px rgba(20, 29, 61, 0.15);
+}
+
+.hero__content {
+  width: 365px;
+}
+
+.hero__image {
+  width: 543px;
+  height: 400px;
+}
+
+.hero__title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 42px;
+
+  color: #0d1c41;
+
+  margin-bottom: 6px;
+  /* Коллапс - це: margin: 11px; + margin: 21px; = margin: 21px;  */
+}
+
+.hero__title--light {
+  font-weight: 100;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+.hero__text {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 300;
+  color: #0d1c41;
+
+  margin: 20px 0;
+}
+
+.hero__btn {
+  display: inline-block;
+
+  width: 265px;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  background-color: #ffffff;
+  border: 1px solid #4a607a;
+  color: #0d1c41;
+
+  padding: 20px;
+
+  box-shadow: 0px 2px 18px rgba(41, 41, 41, 0.1);
+  border-radius: 6px;
+}
+
+/* HERO end ****************/
+
+.section-title {
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.section-title--white {
+  color: #fff;
+}
+
+/* BENEFITS CARD start */
+.benefit-wrapper {
+  background-color: #566a82;
+  padding: 68px 0 90px;
+}
+
+.benefit-list {
+  margin-top: 76px;
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+}
+
+.benefit-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 165px;
+  height: 190px;
+  padding: 35px 0;
+
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0px -26px 0px #ddd0a4, 0px 2px 18px rgba(41, 41, 41, 0.1);
+}
+
+/* .benefit-card__img {
+  width: 67px;
+  height: 67px;
+} */
+
+.benefit-card__text {
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+
+  color: #0d1c41;
+}
+
