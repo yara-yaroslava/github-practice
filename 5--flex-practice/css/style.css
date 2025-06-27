@@ -1,7 +1,9 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,200,300,regular,500,600,700,800,900);
+
 * {
   box-sizing: border-box;
   /* ВАЖЛИВО! Задля фіксованого розміру встановлених width & height елементів. За замовчуванням box-sizing: content-box; тоді розмір елементу буде змінюватись в залежності від розміру контенту. То є не ок.*/
-  font-family: sans-serif;
+  font-family: Roboto, sans-serif;
 }
 
 /* .block {
@@ -162,6 +164,7 @@
 }
 
 /* BENEFITS CARD start */
+
 .benefit-wrapper {
   background-color: #566a82;
   padding: 68px 0 90px;
@@ -196,3 +199,48 @@
 
   color: #0d1c41;
 }
+
+/*********** BENEFITS END ***********/
+/*********** CONDITIONS START ***********/
+
+.conditions--wrapper {
+  margin-top: 60px;
+}
+
+.conditions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.conditions-card {
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 60px;
+}
+
+.conditions-content {
+  width: 346px;
+}
+
+.conditions__title {
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 100px;
+}
+
+.conditions__text {
+  font-size: 24px;
+  line-height: 25px;
+}
+
+.conditions__text-thin {
+  font-size: 24px;
+  line-height: 25px;
+  font-weight: 100;
+}
+
+/*********** CONDITIONS END ***********/
+/*********** PROPOSITION START ***********/
+
