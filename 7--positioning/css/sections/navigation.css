@@ -1,0 +1,62 @@
+.navigation--wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  box-shadow: 8px 4px 15px rgba(95, 95, 95, 0.156);
+  background-color: var(--white);
+}
+/* Якщо потрібно закріпити навігаційну панель при скролінгу сторінки, то треба задати background-color. Якщо не потрібно - то залишаємо так. */
+
+.navigation {
+  display: grid;
+  grid-template-columns: 1fr minmax(200px, 6fr) 3fr minmax(100px, 4fr);
+  grid-gap: 0 30px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px 0;
+}
+
+.navigation__logo {
+  width: 53px;
+  height: 58px;
+}
+/* Для більшого контролю розміру картинки .svg в різних станах батьківського елементу, ми в index.html змінюємо w100%+h100%. А в style.css зазначаємо їх першочергові розміри. */
+
+.navigation__menu {
+  justify-self: center;
+  display: flex;
+  gap: 40px; /* Ця властивість використовується тільки сучасними браузерами (аналітика Can I Use), тому треба відштовхуватись від клієнто-орінтованості замовника і робити висновки.*/
+}
+
+.navigation__item {
+  /* margin-right: 40px; Може бути замість gap: 40px;.*/
+}
+
+.navigation__link {
+  justify-self: center;
+  font-size: 18px;
+  line-height: 21px;
+  color: var(--black);
+  text-decoration: none;
+}
+
+.navigation__profile {
+  display: flex;
+  align-items: center;
+  justify-self: end;
+  /* justify-self: end; В grid прилипили контент ячейкі до правого кінця вплотну. */
+  gap: 15px;
+  /* Якщо браузер не підтримує, то застосовуємо margin.  */
+}
+
+.navigation__profile-icon {
+  width: 34px;
+  height: 34px;
+}
+
+.navigation__profile-text {
+  font-size: 18px;
+  line-height: 21px;
+}
