@@ -5,6 +5,10 @@
   --gold: #ddd0a4;
   --gray: ##323232;
   --black: #000;
+
+  overflow-y: scroll !important;
+  scrollbar-color: var(--dark-blue) var(--gold) !important;
+
   /* Два тире перед змінною, то є правило без якого все зламається. */
 }
 
