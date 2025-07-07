@@ -1,0 +1,56 @@
+:root {
+  --blue: #4a607a;
+  --dark-blue: #0d1c41;
+  --white: #fff;
+  --gold: #ddd0a4;
+  --gray: ##323232;
+  --black: #000;
+
+  overflow-y: scroll !important;
+  scrollbar-color: var(--dark-blue) var(--gold) !important;
+
+  /* Два тире перед змінною, то є правило без якого все зламається. */
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,200,300,regular,500,600,700,800,900);
+
+* {
+  box-sizing: border-box;
+  /* ВАЖЛИВО! Задля фіксованого розміру встановлених width & height елементів. За замовчуванням box-sizing: content-box; тоді розмір елементу буде змінюватись в залежності від розміру контенту. То є не ок.*/
+  font-family: Roboto, sans-serif;
+  
+}
+
+/* .block {
+  width: 200px;
+  height: 160px; Не вказуємо висоту, щоб уникати переповнення контенту.
+  швидке написання: w200+h160
+} */
+
+.container {
+  width: 1165px;
+  margin: 0 auto;
+}
+
+.section-title {
+  width: 644px;
+  margin: 0 auto;
+  font-size: 48px;
+  line-height: 72px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.section-title--white {
+  color: var(--white);
+}
+
+.section-subtitle {
+  width: 493px;
+  margin: 30px auto;
+
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: var(--dark-blue);
+}
