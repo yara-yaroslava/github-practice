@@ -1,0 +1,41 @@
+.emergancy-steps--wrapper {
+  padding: 50px 0;
+}
+
+.emergancy-steps {
+  margin-top: 50px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 165px);
+  justify-content: center;
+  grid-gap: 55px 30px;
+}
+
+.emergancy-steps__item {
+  padding: 30px 16px;
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  /* Недоресно використовувати grid в такому випадку. */
+
+  border-radius: 20px;
+  border: 1px solid var(--blue);
+  box-shadow: 0px 2px 18px rgba(41, 41, 41, 0.1);
+}
+
+.emergancy-steps__text {
+  font-size: 14px;
+  line-height: 16px;
+
+  margin-top: 20px;
+
+  color: var(--black);
+}
+
+.emergancy-steps__content {
+  grid-column: 1 / span 4;
+  padding: 40px 20px;
+
+  box-shadow: 0px 2px 18px rgba(41, 41, 41, 0.1);
+  border-radius: 13px;
+}

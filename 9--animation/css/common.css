@@ -18,7 +18,6 @@
   box-sizing: border-box;
   /* ВАЖЛИВО! Задля фіксованого розміру встановлених width & height елементів. За замовчуванням box-sizing: content-box; тоді розмір елементу буде змінюватись в залежності від розміру контенту. То є не ок.*/
   font-family: Roboto, sans-serif;
-  
 }
 
 /* .block {
@@ -53,4 +52,86 @@
   line-height: 21px;
   text-align: center;
   color: var(--dark-blue);
+}
+
+.callme-btn {
+  position: fixed;
+  right: 4vh;
+  bottom: 4vh;
+  padding: 10px 25px;
+
+  font-size: 40px;
+
+  border: none;
+  border-radius: 10px;
+  background-color: var(--blue);
+  color: var(--white);
+
+  animation: 1s wiggle linear;
+}
+
+@keyframes wiggle {
+  10% {
+    transform: rotate(0deg);
+  }
+
+  20% {
+    transform: rotate(10deg);
+  }
+
+  30% {
+    transform: rotate(-10deg);
+  }
+
+  40% {
+    transform: rotate(10deg);
+  }
+
+  50% {
+    transform: rotate(-10deg);
+  }
+
+  60% {
+    transform: rotate(0deg);
+  }
+}
+
+.loading {
+  margin: 50px;
+}
+
+.load-big {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 10px solid var(--blue);
+  border-radius: 100%;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+
+  animation: 4s rotate linear infinite;
+}
+
+.load-small {
+  width: 50px;
+  height: 50px;
+
+  border: 10px solid var(--blue);
+  border-radius: 100%;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+
+  animation: 2s rotate reverse linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
